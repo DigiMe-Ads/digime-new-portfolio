@@ -1,0 +1,166 @@
+<!-- ===================== SLIDE 04 · PROCESS ===================== -->
+<section class="slide slide--light s-process" id="process" data-title="Our Web Development Process">
+  <style>
+    .s-process .process__title { left: calc(182 * var(--u)); width: calc(987 * var(--u)); text-align: center; color: var(--green); white-space: nowrap; letter-spacing: -0.03em; }
+
+    .s-process .step { display: contents; }
+    .s-process .step__ring { width: calc(160 * var(--u)); overflow: visible; }
+    .s-process .step__text { width: calc(220 * var(--u)); text-align: center; }
+    .s-process .step__text h3 {
+      font-family: var(--f-label);
+      font-weight: 800;
+      font-size: calc(24 * var(--u));
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .s-process .step__text p {
+      margin-top: calc(6 * var(--u));
+      font-size: calc(17 * var(--u));
+      line-height: 1.15;
+    }
+
+    /* ring parts */
+    .s-process .ring-band {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 18;
+      stroke-dasharray: 169.65 400;
+      stroke-dashoffset: 169.65;
+      transition: stroke-dashoffset 1.3s var(--ease-out) var(--d, 0s);
+    }
+    .s-process.is-in .ring-band { stroke-dashoffset: 0; }
+    .s-process .ring-arrows {
+      fill: none;
+      stroke: #574b6c;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transform-box: view-box;
+      transform-origin: 50% 50%;
+      animation: ring-sway 5s ease-in-out infinite alternate;
+    }
+    .s-process .ring-core { fill: #eceff2; }
+    .s-process .ring-num { font-family: var(--f-head); font-weight: 700; font-size: 31px; fill: #000; }
+    .s-process .step:hover .ring-arrows { animation-duration: 1.2s; }
+    @keyframes ring-sway { from { transform: rotate(-7deg) scale(.88); } to { transform: rotate(7deg) scale(.88); } }
+
+    @media (max-width: 860px), (max-aspect-ratio: 4/5) {
+      .s-process .process__title { left: auto; width: auto; font-size: clamp(38px, 11vw, 64px); white-space: normal; }
+      .s-process .steps-m { display: flex; flex-direction: column; gap: 14px; }
+      .s-process .step {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 16px 10px 4px;
+        background: #fff;
+        border-radius: 18px;
+      }
+      .s-process .step__ring { width: 96px; }
+      .s-process .step__text { width: auto; text-align: left; }
+      .s-process .step__text h3 { font-size: 19px; }
+      .s-process .step__text p { font-size: 15px; line-height: 1.35; margin-top: 2px; }
+    }
+  </style>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="ring-shadow" x="-40%" y="-40%" width="180%" height="180%">
+        <feDropShadow dx="5" dy="7" stdDeviation="6" flood-color="#000" flood-opacity=".22" />
+      </filter>
+      <path id="arrows-top" d="M-72.0 -2.5A72 72 0 0 1 -44.3 -56.7M-52.3 -56.3L-44.3 -56.7L-46.7 -49.1M-27.0 -66.8A72 72 0 0 1 27.0 -66.8M22.6 -73.5L27.0 -66.8L19.2 -65.0M44.3 -56.7A72 72 0 0 1 72.0 -2.5M76.3 -9.2L72.0 -2.5L67.1 -8.9" />
+      <path id="arrows-bottom" d="M-72.0 2.5A72 72 0 0 0 -44.3 56.7M-46.7 49.1L-44.3 56.7L-52.3 56.3M-27.0 66.8A72 72 0 0 0 27.0 66.8M19.2 65.0L27.0 66.8L22.6 73.5M44.3 56.7A72 72 0 0 0 72.0 2.5M67.1 8.9L72.0 2.5L76.3 9.2" />
+    </defs>
+  </svg>
+
+  <span class="bg-circle" style="--x:786; --y:-894; --d:1185"></span>
+  <span class="bg-circle" style="--x:1279; --y:33; --d:345"></span>
+  <div class="dots" style="--x:81; --y:81" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <h2 class="abs t h-display process__title" style="--y:72; --fs:100" data-anim="up">Our Web<br />Development Process</h2>
+
+  <!--
+    Each step: ring position (cx, cy = ring centre) and text position.
+    Odd steps: green band at the bottom, text above. Even steps: the opposite.
+  -->
+  <div class="steps-m">
+    <div class="step">
+      <svg class="abs step__ring" style="--x:152; --y:447; --d:.1s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-top" class="ring-arrows" />
+        <circle class="ring-band" r="54" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">01</text>
+      </svg>
+      <div class="abs step__text" style="--x:122; --y:334; --d:.1s" data-anim="up">
+        <h3>DISCOVER</h3>
+        <p>Understand the business, audience, and goals backend processes</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <svg class="abs step__ring" style="--x:349; --y:437; --d:.25s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-bottom" class="ring-arrows" />
+        <circle class="ring-band" r="54" transform="rotate(180)" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">02</text>
+      </svg>
+      <div class="abs step__text" style="--x:319; --y:625; --d:.25s" data-anim="up">
+        <h3>DESIGN</h3>
+        <p>Wireframes and UI design aligned to brand identity</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <svg class="abs step__ring" style="--x:545; --y:447; --d:.4s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-top" class="ring-arrows" />
+        <circle class="ring-band" r="54" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">03</text>
+      </svg>
+      <div class="abs step__text" style="--x:515; --y:343; --d:.4s" data-anim="up">
+        <h3>DEVELOP</h3>
+        <p>Clean, scalable front-end and back-end build</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <svg class="abs step__ring" style="--x:741; --y:437; --d:.55s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-bottom" class="ring-arrows" />
+        <circle class="ring-band" r="54" transform="rotate(180)" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">04</text>
+      </svg>
+      <div class="abs step__text" style="--x:714; --y:615; --d:.55s" data-anim="up">
+        <h3>TEST</h3>
+        <p>Cross-device, cross-browser QA and performance checks</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <svg class="abs step__ring" style="--x:934; --y:447; --d:.7s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-top" class="ring-arrows" />
+        <circle class="ring-band" r="54" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">05</text>
+      </svg>
+      <div class="abs step__text" style="--x:909; --y:334; --d:.7s" data-anim="up">
+        <h3>LAUNCH</h3>
+        <p>Deployment, domain/hosting setup, go-live support</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <svg class="abs step__ring" style="--x:1132; --y:437; --d:.85s" viewBox="-80 -80 160 160" data-anim="zoom" aria-hidden="true">
+        <use href="#arrows-bottom" class="ring-arrows" />
+        <circle class="ring-band" r="54" transform="rotate(180)" />
+        <circle class="ring-core" r="45" filter="url(#ring-shadow)" />
+        <text class="ring-num" text-anchor="middle" dy="11">06</text>
+      </svg>
+      <div class="abs step__text" style="--x:1106; --y:625; --d:.85s" data-anim="up">
+        <h3>SUPPORT</h3>
+        <p>Ongoing maintenance, updates, and optimization</p>
+      </div>
+    </div>
+  </div>
+</section>

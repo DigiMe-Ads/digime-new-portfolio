@@ -1,0 +1,45 @@
+<!-- ===================== SLIDE 05 · FEATURED WEB PROJECTS ===================== -->
+<section class="slide slide--green s-featured" id="projects" data-title="Featured Web Projects">
+  <style>
+    .s-featured .featured__title { color: #fff; }
+    .s-featured .featured__next {
+      display: grid;
+      place-items: center;
+      width: calc(188 * var(--u));
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--green-dark);
+      color: #1fa52f;
+      transition: transform .4s var(--ease-out), color .3s;
+    }
+    .s-featured .featured__next svg { width: 52%; animation: nudge 2.2s ease-in-out infinite; }
+    .s-featured .featured__next:hover { transform: scale(1.06); color: #fff; }
+    @keyframes nudge { 0%, 100% { translate: 0 0; } 50% { translate: 10% 0; } }
+
+    @media (max-width: 860px), (max-aspect-ratio: 4/5) {
+      .s-featured { align-items: center; text-align: center; }
+      .s-featured .featured__title { font-size: clamp(48px, 15vw, 88px); }
+      .s-featured .featured__art { width: min(80vw, 420px); }
+      .s-featured .featured__next { width: 84px; }
+    }
+  </style>
+
+  <svg class="blob" style="--x:905; --y:-315; --w:725; transform: scaleX(-1)" viewBox="-190 -315 725 845" aria-hidden="true">
+    <path d="M529,-26C529,-26 393,3 338,-20C260,-54 9,-131 -25,204C-58,526 -187,-73 -186,-86C-185,-99 185,-286 189,-298C192,-310 529,-26 529,-26Z"/>
+    <path d="M514,-20C411,21 269,208 173,233C65,261 -29,190 -45,75C-61,-40 21,-138 133,-142C231,-145 349,3 514,-20Z"/>
+  </svg>
+  <span class="glass" style="--x:-73; --y:-156; --d:1138"></span>
+  <span class="glass" style="--x:194; --y:107; --d:612; --delay:-8s"></span>
+
+  <h2 class="abs t h-display featured__title" style="--x:125; --y:294; --fs:118" data-anim="left">Featured<br />Web Projects</h2>
+
+  <div class="abs featured__art" style="--x:926; --y:189; --w:463; --d:.2s" data-anim="right">
+    <img class="float" src="assets/img/laptop-gears.webp" alt="3D laptop with gears" width="800" height="589" />
+  </div>
+
+  <a class="abs featured__next" style="--x:1011; --y:543; --d:.45s" href="#digimeads-bee-natural" data-anim="zoom" aria-label="See the projects">
+    <svg viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+      <path d="M50 12 44 18 72 44H8v12h64L44 82l6 6 38-38z" transform="translate(4 0)" />
+    </svg>
+  </a>
+</section>

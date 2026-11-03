@@ -1,0 +1,58 @@
+<!-- ===================== SLIDE 12 · CONTACT ===================== -->
+<section class="slide slide--light s-contact" id="contact" data-title="Join Forces With Us">
+  <style>
+    .s-contact .contact__col { left: calc(252 * var(--u)); width: calc(880 * var(--u)); text-align: center; font-family: var(--f-contact); }
+    .s-contact h2 { font-weight: 700; font-size: calc(65 * var(--u)); line-height: 1.2; letter-spacing: .005em; }
+    .s-contact .contact__intro { margin-top: calc(8 * var(--u)); font-size: calc(24 * var(--u)); line-height: 1.17; }
+    .s-contact .contact__logo { width: calc(584 * var(--u)); margin: calc(68 * var(--u)) auto 0; }
+    .s-contact .contact__list { list-style: none; margin: calc(36 * var(--u)) 0 0; padding: 0; font-size: calc(24.5 * var(--u)); line-height: calc(58 * var(--u)); }
+    .s-contact .contact__list a { text-decoration: none; background: linear-gradient(var(--green), var(--green)) 0 100% / 0 2px no-repeat; transition: background-size .35s var(--ease-out), color .25s; }
+    .s-contact .contact__list a:hover, .s-contact .contact__list a:focus-visible { color: var(--green); background-size: 100% 2px; }
+    .s-contact .green-circle {
+      position: absolute;
+      z-index: -1;
+      border-radius: 50%;
+      background: #119320;
+      left: calc(var(--x) * var(--u));
+      top: calc(var(--y) * var(--u));
+      width: calc(var(--d) * var(--u));
+      aspect-ratio: 1;
+      transition: transform 1.4s var(--ease-out);
+      transform: scale(.6);
+    }
+    .s-contact.is-in .green-circle { transform: scale(1); }
+
+    @media (max-width: 860px), (max-aspect-ratio: 4/5) {
+      .s-contact { --u: calc(100cqw / 900); }
+      .s-contact .contact__col { left: auto; width: auto; }
+      .s-contact h2 { font-size: clamp(28px, 8.4vw, 48px); }
+      .s-contact .contact__intro { font-size: clamp(15px, 4.1vw, 19px); line-height: 1.5; margin-top: 10px; }
+      .s-contact .contact__logo { width: min(74vw, 360px); margin-top: 36px; }
+      .s-contact .contact__list { font-size: clamp(15px, 4.2vw, 19px); line-height: 2.3; margin-top: 22px; }
+      .s-contact .green-circle { width: 220px; }
+      .s-contact .green-circle:nth-of-type(1) { left: auto; right: -140px; top: -70px; }
+      .s-contact .green-circle:nth-of-type(2) { left: -130px; top: auto; bottom: -60px; }
+    }
+  </style>
+
+  <span class="green-circle" style="--x:1116; --y:261; --d:701"></span>
+  <span class="green-circle" style="--x:-262; --y:417; --d:504"></span>
+
+  <div class="abs contact__col" style="--y:118">
+    <h2 data-anim="up">JOIN FORCES WITH US</h2>
+    <p class="contact__intro" data-anim="up" style="--d:.1s">
+      We are in business for the long haul because we believe in building strong
+      corporate relationships. We are always excited when our partners
+      experience success through working with us.
+    </p>
+
+    <img class="contact__logo" data-anim="zoom" style="--d:.2s" src="assets/img/logo.webp" alt="DigiMe Ads" width="1000" height="486" />
+
+    <ul class="contact__list" data-anim="up" style="--d:.3s">
+      <li><a href="tel:+94777444956">+94 777 444 956</a> | <a href="tel:+94771813729">+94 771 813 729</a></li>
+      <li><a href="mailto:andrew@digimeads.com">andrew@digimeads.com</a></li>
+      <li><a href="https://digimeads.com/" target="_blank" rel="noopener">www.digimeads.com</a></li>
+      <li>No. 410/3, Bauddhaloka Mawatha, Colombo 07</li>
+    </ul>
+  </div>
+</section>

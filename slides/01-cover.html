@@ -1,0 +1,59 @@
+<!-- ===================== SLIDE 01 · COVER ===================== -->
+<section class="slide slide--green s-cover" id="home" data-title="Web Development Portfolio">
+  <style>
+    .s-cover .cover__logo { width: calc(508 * var(--u)); }
+    .s-cover .cover__title {
+      left: 0; right: 0;
+      text-align: center;
+      color: var(--white-text);
+      line-height: .99;
+      letter-spacing: -0.005em;
+    }
+    .s-cover .cover__code img { opacity: .8; }
+    .s-cover .cover__sub {
+      left: 0; right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .005em;
+    }
+
+    @media (max-width: 860px), (max-aspect-ratio: 4/5) {
+      .s-cover { text-align: center; align-items: center; gap: 22px; }
+      .s-cover .cover__logo { width: min(62vw, 300px); }
+      .s-cover .cover__title { font-size: clamp(34px, 11vw, 72px); line-height: 1.02; }
+      .s-cover .cover__sub { font-size: clamp(13px, 3.6vw, 18px); line-height: 1.5; max-width: 420px; }
+      .s-cover .cover__code { position: absolute; left: -40px; top: -20px; width: 46vw; max-width: 260px; }
+      .s-cover .cover__www { position: absolute; right: -24px; bottom: 10px; width: 44vw; max-width: 250px; }
+      .s-cover .cover__logo-wrap { margin-top: 18vw; }
+      .s-cover .cover__sub { margin-bottom: 22vw; }
+    }
+  </style>
+
+  <!-- background -->
+  <svg class="blob" style="--x:-190; --y:-315; --w:725" viewBox="-190 -315 725 845" aria-hidden="true">
+    <path d="M529,-26C529,-26 393,3 338,-20C260,-54 9,-131 -25,204C-58,526 -187,-73 -186,-86C-185,-99 185,-286 189,-298C192,-310 529,-26 529,-26Z"/>
+    <path d="M514,-20C411,21 269,208 173,233C65,261 -29,190 -45,75C-61,-40 21,-138 133,-142C231,-145 349,3 514,-20Z"/>
+  </svg>
+  <span class="glass" style="--x:341; --y:97; --d:879"></span>
+  <span class="glass" style="--x:872; --y:277; --d:606; --delay:-6s"></span>
+
+  <div class="abs cover__code" style="--x:-53; --y:-45; --w:356" data-anim="down" aria-hidden="true">
+    <img class="float" src="assets/img/code-window.webp" alt="" width="600" height="536" />
+  </div>
+  <div class="abs cover__www" style="--x:1142; --y:601; --w:336; --d:.5s" data-anim="up" aria-hidden="true">
+    <img class="float" style="--fd:-3s" src="assets/img/www-link.webp" alt="" width="600" height="369" />
+  </div>
+
+  <!-- content -->
+  <div class="abs cover__logo-wrap" style="--x:466; --y:154" data-anim="zoom">
+    <img class="cover__logo" src="assets/img/logo-dark.webp" alt="DigiMe Ads" width="800" height="389" />
+  </div>
+
+  <h1 class="abs t h-display cover__title" style="--y:302; --fs:136" data-anim="up">
+    WEB DEVELOPMENT<br />PORTFOLIO
+  </h1>
+
+  <p class="abs t cover__sub" style="--y:601; --fs:26; --d:.25s" data-anim="up">
+    Building fast, scalable, user-focused websites for modern businesses.
+  </p>
+</section>

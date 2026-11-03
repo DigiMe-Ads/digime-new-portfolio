@@ -1,0 +1,94 @@
+<!-- ===================== SLIDE 03 · WHAT WE OFFER ===================== -->
+<section class="slide slide--light s-offer" id="what-we-offer" data-title="What We Offer">
+  <style>
+    .s-offer .offer__title { color: var(--green); }
+    .s-offer .offer__grid {
+      display: grid;
+      grid-template-columns: repeat(3, calc(245 * var(--u)));
+      grid-auto-rows: calc(258 * var(--u));
+      gap: calc(12 * var(--u));
+    }
+    .s-offer .card {
+      position: relative;
+      height: 100%;
+      padding: calc(17 * var(--u)) calc(20 * var(--u)) 0 calc(23 * var(--u));
+      border: calc(1.5 * var(--u)) solid #fff;
+      border-radius: calc(19 * var(--u));
+      background: #fff;
+      transition: transform .45s var(--ease-out), box-shadow .45s var(--ease-out);
+    }
+    .s-offer .card--pattern { background: url("assets/img/card-pattern.webp") center / cover; }
+    .s-offer .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px -18px rgba(22, 59, 66, .35); }
+    .s-offer .card__icon {
+      height: calc(116 * var(--u));
+      display: flex;
+      align-items: flex-start;
+    }
+    .s-offer .card__icon img { height: 100%; width: auto; transition: transform .6s var(--ease-out); }
+    .s-offer .card:hover .card__icon img { transform: scale(1.08) rotate(-3deg); }
+    .s-offer .card h3 {
+      margin-top: calc(11 * var(--u));
+      font-family: var(--f-label);
+      font-weight: 800;
+      font-size: calc(23 * var(--u));
+      line-height: 1;
+      letter-spacing: -0.035em;
+      white-space: nowrap;
+      color: var(--ink);
+    }
+    .s-offer .card h3.is-green { color: var(--green); }
+    .s-offer .card p {
+      margin-top: calc(5 * var(--u));
+      font-family: var(--f-head);
+      font-size: calc(15.5 * var(--u));
+      line-height: 1.2;
+    }
+
+    @media (max-width: 860px), (max-aspect-ratio: 4/5) {
+      .s-offer .offer__title { font-size: clamp(44px, 14vw, 80px); }
+      .s-offer .offer__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; gap: 12px; }
+      .s-offer .card { min-width: 0; padding: 14px 14px 18px; border-radius: 16px; }
+      .s-offer .card__icon { height: 76px; }
+      .s-offer .card h3 { font-size: 17px; margin-top: 10px; white-space: normal; line-height: 1.1; }
+      .s-offer .card p { font-size: 13.5px; line-height: 1.3; }
+    }
+  </style>
+
+  <span class="bg-circle" style="--x:-694; --y:-687; --d:1185"></span>
+  <span class="bg-circle" style="--x:210; --y:-147; --d:344"></span>
+
+  <h2 class="abs t h-display offer__title" style="--x:81; --y:424; --fs:118" data-anim="left">What<br />We Offer</h2>
+
+  <div class="abs offer__grid" style="--x:599; --y:141">
+    <article class="card" data-anim="up" style="--d:.05s">
+      <div class="card__icon"><img src="assets/img/icons/web.webp" alt="" width="300" height="268" /></div>
+      <h3>Website Design &amp;<br />Development</h3>
+      <p>Custom-built, responsive<br />sites from scratch</p>
+    </article>
+    <article class="card card--pattern" data-anim="up" style="--d:.15s">
+      <div class="card__icon"><img src="assets/img/icons/ecommerce.webp" alt="" width="300" height="251" /></div>
+      <h3 class="is-green">E-commerce<br />Development</h3>
+      <p>Online stores with payment<br />gateway integration</p>
+    </article>
+    <article class="card" data-anim="up" style="--d:.25s">
+      <div class="card__icon"><img src="assets/img/icons/cms.webp" alt="" width="300" height="265" /></div>
+      <h3>CMS<br />Websites</h3>
+      <p>Custom CMS builds</p>
+    </article>
+    <article class="card card--pattern" data-anim="up" style="--d:.2s">
+      <div class="card__icon"><img src="assets/img/icons/landing.webp" alt="" width="300" height="213" /></div>
+      <h3 class="is-green">Landing Pages &amp;<br />Microsites</h3>
+      <p>Campaign-specific,<br />conversion-optimized pages</p>
+    </article>
+    <article class="card" data-anim="up" style="--d:.3s">
+      <div class="card__icon"><img src="assets/img/icons/revamp.webp" alt="" width="300" height="288" /></div>
+      <h3>Website<br />Revamps</h3>
+      <p>Modernizing outdated sites for speed, mobile responsiveness.</p>
+    </article>
+    <article class="card card--pattern" data-anim="up" style="--d:.4s">
+      <div class="card__icon"><img src="assets/img/icons/support.webp" alt="" width="300" height="334" /></div>
+      <h3 class="is-green">Ongoing Maintenance<br />&amp; Support</h3>
+      <p>Hosting, updates, security,<br />performance monitoring</p>
+    </article>
+  </div>
+</section>
